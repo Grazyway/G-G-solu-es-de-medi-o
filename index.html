@@ -360,11 +360,10 @@ footer .sel{user-select:all;color:var(--navy);font-weight:700}
       <div class="mono kicker">Fale conosco</div>
       <h2 id="fc-title">Fale direto com quem faz o serviço</h2>
       <p>Diga o que você precisa medir ou controlar, o fluido e onde vai instalar. Respondemos com o produto certo e o preço.</p>
+      <div class="mono kicker" style="margin-top:8px">Siga a G&amp;G</div>
       <div class="cways">
-        <a class="cway cel" id="c-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><span><span class="k">Celular e WhatsApp</span><span class="v">(11) 92540-0775</span></span></a>
-        <a class="cway" href="tel:+5511925400775"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 3.5h3.5l1.5 4.5-2.2 1.4a11 11 0 0 0 5.8 5.8l1.4-2.2 4.5 1.5V18a2.5 2.5 0 0 1-2.5 2.5A15.5 15.5 0 0 1 2.5 6 2.5 2.5 0 0 1 5 3.5Z"/></svg><span><span class="k">Ligar agora</span><span class="v">+55 (11) 92540-0775</span></span></a>
-        <a class="cway" href="mailto:ggsolucoesdemedicao@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span><span class="k">E-mail</span><span class="v">ggsolucoesdemedicao@gmail.com</span></span></a>
         <a class="cway" href="https://www.instagram.com/ggsolucoesdemedicao/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></svg><span><span class="k">Instagram</span><span class="v">@ggsolucoesdemedicao</span></span></a>
+        <a class="cway" href="https://www.linkedin.com/search/results/all/?keywords=G%26G%20Solu%C3%A7%C3%B5es%20de%20Medi%C3%A7%C3%A3o" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a2.5 2.5 0 0 1 5 0V17"/></svg><span><span class="k">LinkedIn</span><span class="v">G&amp;G Soluções de Medição</span></span></a>
       </div>
     </div>
     <form class="cform" id="cform" novalidate>
@@ -449,7 +448,6 @@ function render(){
   }).join("");
   main.innerHTML=html||`<p class="empty">Nenhum produto encontrado para “${esc(q)}”. Fale com a gente no WhatsApp que procuramos para você.</p>`;
 }
-document.getElementById("c-wa").href = waLink("Olá! Vim pelo site da G&G.");
 document.getElementById("cform").addEventListener("submit",e=>{
   e.preventDefault();
   const f=e.target, v=n=>f.elements[n].value.trim(), err=document.getElementById("cerr");
