@@ -36,11 +36,11 @@ a{color:inherit}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);color:var(--navy);border-bottom:1px solid var(--line)}
 header.top .wrap{display:flex;align-items:center;gap:12px;padding-block:10px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
-.brand img{width:38px;height:38px}
+.brand img{width:44px;height:44px;border-radius:50%}
 .brand b{font-family:var(--font-display);font-weight:700;font-size:17px;letter-spacing:.02em;white-space:nowrap}
 .brand small{display:block;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.18em;color:var(--slate)}
 .spacer{flex:1}
-.wa{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:9px 16px;font-size:14px;white-space:nowrap;border:0;cursor:pointer}
+.wa{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:9px 16px;font-family:inherit;font-size:14px;white-space:nowrap;border:0;cursor:pointer}
 .wa:hover{filter:brightness(1.08)}
 .wa svg{width:18px;height:18px;flex:none}
 
@@ -72,6 +72,66 @@ section.cat#chopp{background:var(--sand);border:1px solid var(--sand-line);borde
 #chopp .price.ask{color:var(--amber)}
 .chip[data-c="chopp"]{background:var(--sand);color:var(--amber-ink);box-shadow:inset 0 0 0 1px var(--sand-line)}
 .chip[data-c="chopp"][aria-pressed="true"]{background:var(--amber);color:#fff;box-shadow:none}
+
+/* menu */
+.menu{display:flex;align-items:center;gap:4px}
+.menu a{color:var(--navy);text-decoration:none;font-weight:700;font-size:14px;padding:8px 12px;border-radius:999px;white-space:nowrap}
+.menu a:hover{background:var(--soft)}
+.menu a.contact{box-shadow:inset 0 0 0 1.5px var(--navy)}
+.menu a.contact:hover{background:var(--navy);color:#fff}
+html{scroll-behavior:smooth}
+#catalog,#quem-somos,#contato{scroll-margin-top:72px}
+#catalog{scroll-margin-top:190px}
+
+/* quem somos: areia, o calor de casa */
+.about{background:#f6f1e8;border-top:1px solid #efe8dc;border-bottom:1px solid #efe8dc}
+.about .wrap{padding-block:56px}
+.about .lead{display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:center}
+.about .sym{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.about .sym img{width:min(220px,60%);height:auto;background:#fff;border-radius:50%;box-shadow:0 0 0 10px #fff,0 10px 30px rgba(27,59,102,.12)}
+.about .sym .mono{color:var(--slate)}
+.kicker{color:var(--amber-ink);margin-bottom:10px}
+.about h2,.contact-sec h2{color:var(--navy);font-size:clamp(28px,3.6vw,40px);font-weight:700;line-height:1.12;margin-bottom:16px}
+.about p{margin:0 0 14px;font-size:16px;max-width:62ch}
+.stats{display:flex;flex-wrap:wrap;gap:14px 36px;margin:22px 0 4px}
+.stats div{min-width:140px}
+.stats b{display:block;font-family:var(--font-mono);font-size:34px;font-weight:600;color:var(--navy);line-height:1}
+.stats span{font-size:13.5px;color:var(--slate)}
+.mission{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.mission > div{background:#fff;border:1px solid #efe8dc;border-radius:16px;padding:20px 22px}
+.mission .mono{color:var(--green);margin-bottom:8px}
+.mission p{margin:0;font-size:15px}
+.values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 28px;margin-top:36px;padding:0;list-style:none}
+.values li{border-top:2px solid var(--steel);padding-top:12px}
+.values b{display:block;color:var(--navy);font-size:16px;margin-bottom:4px}
+.values .n{font-family:var(--font-mono);font-size:12px;color:var(--amber-ink);margin-right:8px}
+.values p{margin:0;font-size:14px;color:var(--muted)}
+.signature{margin-top:36px;font-family:var(--font-mono);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:12px;color:var(--navy)}
+
+/* fale conosco */
+.contact-sec .wrap{padding-block:56px;display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:start}
+.contact-sec .intro p{font-size:16px;color:var(--muted);margin:0 0 22px;max-width:44ch}
+.cways{display:grid;gap:12px}
+.cway{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;text-decoration:none;color:var(--fg)}
+.cway:hover{border-color:var(--steel)}
+.cway svg{width:24px;height:24px;flex:none;color:var(--slate)}
+.cway .k{display:block;font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cway .v{display:block;font-weight:700;color:var(--navy);font-size:16px;overflow-wrap:anywhere}
+.cway.cel{background:#e8f3ec;border-color:#cfe6d8}
+.cway.cel svg{color:var(--green)}
+form.cform{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px 16px}
+.cform h3{grid-column:1/-1;color:var(--navy);font-size:20px}
+.cform label{display:flex;flex-direction:column;gap:6px;font-size:13.5px;font-weight:600;color:var(--slate);min-width:0}
+.cform .full{grid-column:1/-1}
+.cform input,.cform select,.cform textarea{font:inherit;font-weight:500;font-size:15px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px;width:100%}
+.cform textarea{min-height:120px;resize:vertical}
+.cform input:focus,.cform select:focus,.cform textarea:focus{outline:2px solid var(--navy);outline-offset:0;border-color:transparent}
+.cform .opt{font-weight:500;color:var(--muted)}
+.cform .send{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.btn-sec{display:inline-flex;align-items:center;gap:8px;background:var(--surface);color:var(--navy);font:inherit;font-weight:700;font-size:14px;border:1.5px solid var(--navy);border-radius:999px;padding:8px 16px;cursor:pointer}
+.btn-sec:hover{background:var(--navy);color:#fff}
+.cform .err{grid-column:1/-1;margin:0;color:#a3341f;font-size:13.5px;font-weight:600}
+.cform .small{grid-column:1/-1;margin:0}
 
 /* review bar */
 .review{background:var(--warn-bg);color:var(--warn-fg);font-size:13.5px}
@@ -143,6 +203,7 @@ footer p{margin:0 0 6px}
 footer .mono{color:var(--amber-ink);margin-bottom:8px}
 footer .sel{user-select:all;color:var(--navy);font-weight:700}
 
+@media (max-width:980px){.values{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:760px){
   .hero .wrap{grid-template-columns:1fr;padding-top:26px}
   .hero .copy{padding-bottom:0}
@@ -153,6 +214,16 @@ footer .sel{user-select:all;color:var(--navy);font-weight:700}
   .brand small{display:none}
   .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
   .wa .lbl{display:none}
+  .wa#wa-top{padding:9px 11px}
+  .menu a{padding:7px 9px;font-size:13px}
+  .menu a.prod{display:none}
+  .brand b{font-size:15px}
+  .about .lead,.mission,.contact-sec .wrap{grid-template-columns:1fr}
+  .about .lead{gap:20px}
+  .about .sym img{width:150px}
+  .values{grid-template-columns:1fr}
+  .about .wrap,.contact-sec .wrap{padding-block:40px}
+  form.cform{grid-template-columns:1fr;padding:18px}
   .filters{top:calc(env(safe-area-inset-top,0px) + 58px)}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -163,9 +234,10 @@ footer .sel{user-select:all;color:var(--navy);font-weight:700}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#inicio"><img src="img/logo.webp" alt=""><span><b>G&amp;G</b><small>SOLUÇÕES DE MEDIÇÃO</small></span></a>
+    <a class="brand" href="#inicio"><img src="img/logo-anim.webp" alt="" width="44" height="44"><span><b>G&amp;G</b><small>SOLUÇÕES DE MEDIÇÃO</small></span></a>
     <span class="spacer"></span>
-    <a class="wa" id="wa-top" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg><span class="lbl">(11) 92540-0775</span></a>
+    <nav class="menu" aria-label="Menu"><a class="prod" href="#catalog">Produtos</a><a href="#quem-somos">Quem somos</a><a class="contact" href="#contato">Fale conosco</a></nav>
+    <a class="wa" id="wa-top" aria-label="WhatsApp (11) 92540-0775" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg><span class="lbl">(11) 92540-0775</span></a>
   </div>
 </header>
 
@@ -182,6 +254,7 @@ footer .sel{user-select:all;color:var(--navy);font-weight:700}
   <div class="scale" aria-hidden="true"></div>
 </section>
 
+<div class="shop">
 <nav class="filters" aria-label="Linhas de produto">
   <div class="wrap">
     <div class="chips" id="chips" role="toolbar"></div>
@@ -190,6 +263,74 @@ footer .sel{user-select:all;color:var(--navy);font-weight:700}
 </nav>
 
 <main class="wrap" id="catalog"></main>
+</div>
+
+<section class="about" id="quem-somos" aria-labelledby="qs-title">
+  <div class="wrap">
+    <div class="lead">
+      <div class="sym">
+        <img src="img/logo-anim-lg.webp" width="220" height="220" alt="Símbolo da G&amp;G: duas letras G unidas dentro de um instrumento de medição">
+        <span class="mono">Glemerson + Graziela</span>
+      </div>
+      <div>
+        <div class="mono kicker">Quem somos</div>
+        <h2 id="qs-title">A família que assina o laudo</h2>
+        <p>A G&amp;G nasceu dentro de casa. É uma empresa de família, fundada por Glemerson e Graziela, marido e mulher, juntos há mais de vinte anos.</p>
+        <p>Glemerson traz mais de trinta anos de experiência em instrumentação industrial: transmissores, malhas de controle, calibração e o dia a dia de uma planta que não pode parar. Graziela é a sócia que caminha ao lado em cada decisão da empresa.</p>
+        <p>Nosso símbolo é a união das iniciais dos dois: duas letras G, uma apoiada na outra, dentro de um instrumento de medição. Aqui você não fala com uma central anônima. Fala com quem faz o serviço e responde pelo próprio nome.</p>
+        <div class="stats">
+          <div><b>30+</b><span>anos em instrumentação industrial</span></div>
+          <div><b>20+</b><span>anos de parceria entre os sócios</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="mission">
+      <div><div class="mono">Missão</div><p>Garantir medições precisas e confiáveis para a indústria, com instrumentação, calibração e manutenção feitas com rigor técnico, atendimento próximo e entregas eficientes, ajudando nossos clientes a operar com segurança, economia de recursos e menor impacto ao meio ambiente.</p></div>
+      <div><div class="mono">Visão</div><p>Ser reconhecida como referência na área, unindo conhecimento, experiência e cuidado com o meio ambiente, e mostrar que precisão, confiança e responsabilidade ambiental caminham juntas.</p></div>
+    </div>
+    <ul class="values" aria-label="Nossos valores">
+      <li><b><span class="n">01</span>Precisão</b><p>Cada medição é uma decisão do cliente. Ajustamos e conferimos até o número estar certo.</p></li>
+      <li><b><span class="n">02</span>Confiança</b><p>Cumprimos o que prometemos, com transparência em prazos, laudos e preços.</p></li>
+      <li><b><span class="n">03</span>Responsabilidade ambiental</b><p>Medição correta evita vazamento, desperdício e emissão.</p></li>
+      <li><b><span class="n">04</span>Eficiência</b><p>Entregas no prazo, com o menor tempo de parada possível na sua operação.</p></li>
+      <li><b><span class="n">05</span>Proximidade</b><p>Atendimento direto e técnico, de quem conhece o equipamento e o cliente pelo nome.</p></li>
+      <li><b><span class="n">06</span>Aprendizado contínuo</b><p>Experiência sempre atualizada com normas, tecnologias e boas práticas.</p></li>
+    </ul>
+    <div class="signature">Precisão que gera confiança.</div>
+  </div>
+  <div class="scale" aria-hidden="true"></div>
+</section>
+
+<section class="contact-sec" id="contato" aria-labelledby="fc-title">
+  <div class="wrap">
+    <div class="intro">
+      <div class="mono kicker">Fale conosco</div>
+      <h2 id="fc-title">Fale direto com quem faz o serviço</h2>
+      <p>Diga o que você precisa medir ou controlar, o fluido e onde vai instalar. Respondemos com o produto certo e o preço.</p>
+      <div class="cways">
+        <a class="cway cel" id="c-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><span><span class="k">Celular e WhatsApp</span><span class="v">(11) 92540-0775</span></span></a>
+        <a class="cway" href="tel:+5511925400775"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 3.5h3.5l1.5 4.5-2.2 1.4a11 11 0 0 0 5.8 5.8l1.4-2.2 4.5 1.5V18a2.5 2.5 0 0 1-2.5 2.5A15.5 15.5 0 0 1 2.5 6 2.5 2.5 0 0 1 5 3.5Z"/></svg><span><span class="k">Ligar agora</span><span class="v">+55 (11) 92540-0775</span></span></a>
+        <a class="cway" href="mailto:ggsolucoesdemedicao@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span><span class="k">E-mail</span><span class="v">ggsolucoesdemedicao@gmail.com</span></span></a>
+        <a class="cway" href="https://www.instagram.com/ggsolucoesdemedicao/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></svg><span><span class="k">Instagram</span><span class="v">@ggsolucoesdemedicao</span></span></a>
+      </div>
+    </div>
+    <form class="cform" id="cform" novalidate>
+      <h3>Envie sua mensagem</h3>
+      <label>Nome<input name="nome" autocomplete="name" required></label>
+      <label><span>Empresa <span class="opt">(opcional)</span></span><input name="empresa" autocomplete="organization"></label>
+      <label>Celular / WhatsApp<input name="cel" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 90000-0000"></label>
+      <label>E-mail<input name="email" type="email" autocomplete="email" placeholder="voce@empresa.com.br"></label>
+      <label class="full">Assunto<select name="assunto"><option>Cotação de produto</option><option>Calibração e manutenção</option><option>Dúvida técnica</option><option>Outro assunto</option></select></label>
+      <label class="full">Mensagem<textarea name="msg" required placeholder="Ex.: preciso de um manômetro 0–10 bar, rosca 1/4&quot; NPT, para água."></textarea></label>
+      <p class="err" id="cerr" role="alert" hidden></p>
+      <div class="send">
+        <button class="wa" type="submit" value="wa"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>Enviar pelo WhatsApp</button>
+        <button class="btn-sec" type="submit" value="mail">Enviar por e-mail</button>
+      </div>
+      <p class="small">A mensagem abre pronta no seu WhatsApp ou no seu e-mail. É só confirmar o envio.</p>
+    </form>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">
@@ -199,8 +340,10 @@ footer .sel{user-select:all;color:var(--navy);font-weight:700}
       <p>Empresa de família, fundada por Glemerson e Graziela. Mais de 30 anos em instrumentação industrial. Aqui você fala com quem faz o serviço e assina o laudo.</p>
     </div>
     <div>
-      <div class="mono">Peça sua cotação</div>
-      <p>Diga o que precisa medir ou controlar, o fluido e onde vai instalar. Indicamos o produto certo.</p>
+      <div class="mono">Navegue</div>
+      <p><a href="#catalog">Produtos</a></p>
+      <p><a href="#quem-somos">Quem somos</a></p>
+      <p><a href="#contato">Fale conosco</a></p>
     </div>
     <div>
       <div class="mono">Contato</div>
@@ -254,7 +397,18 @@ function render(){
   }).join("");
   main.innerHTML=html||`<p class="empty">Nenhum produto encontrado para “${esc(q)}”. Fale com a gente no WhatsApp que procuramos para você.</p>`;
 }
-function open(i){
+document.getElementById("c-wa").href = waLink("Olá! Vim pelo site da G&G.");
+document.getElementById("cform").addEventListener("submit",e=>{
+  e.preventDefault();
+  const f=e.target, v=n=>f.elements[n].value.trim(), err=document.getElementById("cerr");
+  const miss=[]; if(!v("nome"))miss.push("seu nome"); if(!v("cel")&&!v("email"))miss.push("um celular ou e-mail"); if(!v("msg"))miss.push("a mensagem");
+  if(miss.length){err.textContent="Preencha "+miss.join(", ").replace(/, ([^,]*)$/," e $1")+".";err.hidden=false;return}
+  err.hidden=true;
+  const body=[`Nome: ${v("nome")}`, v("empresa")&&`Empresa: ${v("empresa")}`, v("cel")&&`Celular: ${v("cel")}`, v("email")&&`E-mail: ${v("email")}`, `Assunto: ${v("assunto")}`].filter(Boolean).join("\n")+"\n\n"+v("msg");
+  if((e.submitter&&e.submitter.value)==="mail") location.href=`mailto:ggsolucoesdemedicao@gmail.com?subject=${encodeURIComponent(v("assunto")+" - site G&G")}&body=${encodeURIComponent(body)}`;
+  else window.open(waLink(`Olá! Vim pelo site da G&G.\n\n${body}`),"_blank","noopener");
+});
+function openItem(i){
   const it=DATA.items[i], d=document.getElementById("dlg");
   const vs=it.variants?it.variants.replace(/^Nº\s*/,"").split("·").map(s=>s.trim()):null;
   const img=it.img?`<img src="${it.img}" alt="${esc(it.title)}">`:SVC;
@@ -280,7 +434,7 @@ function open(i){
 }
 document.getElementById("dlg").addEventListener("click",e=>{if(e.target.id==="dlg")e.target.close()});
 document.getElementById("chips").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;cur=b.dataset.c;chips();render();document.getElementById("catalog").scrollIntoView({block:"start"})});
-document.getElementById("catalog").addEventListener("click",e=>{const c=e.target.closest(".card");if(c)open(+c.dataset.i)});
+document.getElementById("catalog").addEventListener("click",e=>{const c=e.target.closest(".card");if(c)openItem(+c.dataset.i)});
 document.getElementById("q").addEventListener("input",e=>{q=e.target.value.trim();render()});
 chips();render();
 </script>
