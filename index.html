@@ -36,7 +36,7 @@ a{color:inherit}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);color:var(--navy);border-bottom:1px solid var(--line)}
 header.top .wrap{display:flex;align-items:center;gap:12px;padding-block:10px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
-.brand img{width:44px;height:44px;border-radius:50%}
+.brand img{width:44px;height:44px;border-radius:50%;flex:none}
 .brand b{font-family:var(--font-display);font-weight:700;font-size:17px;letter-spacing:.02em;white-space:nowrap}
 .brand small{display:block;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.18em;color:var(--slate)}
 .spacer{flex:1}
@@ -77,6 +77,8 @@ section.cat#chopp{background:var(--sand);border:1px solid var(--sand-line);borde
 .menu{display:flex;align-items:center;gap:4px}
 .menu a{color:var(--navy);text-decoration:none;font-weight:700;font-size:14px;padding:8px 12px;border-radius:999px;white-space:nowrap}
 .menu a:hover{background:var(--soft)}
+.menu a.home{display:inline-flex;align-items:center;gap:6px;background:var(--soft)}
+.menu a.home svg{width:18px;height:18px}
 .menu a.contact{box-shadow:inset 0 0 0 1.5px var(--navy)}
 .menu a.contact:hover{background:var(--navy);color:#fff}
 .menu a[aria-current="page"]{background:var(--navy);color:#fff;box-shadow:none}
@@ -254,6 +256,8 @@ footer .sel{user-select:all;color:var(--navy);font-weight:700}
   .menu a{padding:7px 9px;font-size:13px}
   .brand b{font-size:15px}
   .menu{gap:2px}
+  .menu a.home span{display:none}
+  .menu a.home{padding:7px 8px}
   .about .lead,.mission,.contact-sec .wrap{grid-template-columns:1fr}
   .about .lead{gap:20px}
   .about .sym img{width:150px}
@@ -262,7 +266,7 @@ footer .sel{user-select:all;color:var(--navy);font-weight:700}
   form.cform{grid-template-columns:1fr;padding:18px}
   .filters{top:calc(env(safe-area-inset-top,0px) + 58px)}
 }
-@media (max-width:420px){.brand b{display:none}.brand small{display:none}}
+@media (max-width:420px){.brand b{display:none}.brand small{display:none}.brand{flex:none}.brand img{width:36px;height:36px}header.top .wrap{gap:4px}.menu a{padding:7px 7px;font-size:12.5px}.menu a.home{padding:7px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -273,7 +277,7 @@ footer .sel{user-select:all;color:var(--navy);font-weight:700}
   <div class="wrap">
     <a class="brand" href="#inicio" aria-label="G&amp;G, página inicial"><img src="img/logo-anim.webp" alt="" width="44" height="44"><span><b>G&amp;G</b><small>SOLUÇÕES DE MEDIÇÃO</small></span></a>
     <span class="spacer"></span>
-    <nav class="menu" aria-label="Menu"><a class="prod" href="#produtos">Produtos</a><a href="#quem-somos">Quem somos</a><a class="contact" href="#contato">Fale conosco</a></nav>
+    <nav class="menu" aria-label="Menu"><a class="home" href="#inicio" aria-label="Voltar para a página inicial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3.5 11 12 4l8.5 7"/><path d="M6 9.5V20h4.5v-5.5h3V20H18V9.5"/></svg><span>Início</span></a><a class="prod" href="#produtos">Produtos</a><a href="#quem-somos">Quem somos</a><a class="contact" href="#contato">Fale conosco</a></nav>
   </div>
 </header>
 
@@ -393,6 +397,7 @@ footer .sel{user-select:all;color:var(--navy);font-weight:700}
     </div>
     <div>
       <div class="mono">Navegue</div>
+      <p><a href="#inicio">Página inicial</a></p>
       <p><a href="#produtos">Produtos</a></p>
       <p><a href="#quem-somos">Quem somos</a></p>
       <p><a href="#contato">Fale conosco</a></p>
