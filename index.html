@@ -81,6 +81,40 @@ section.cat#chopp{background:var(--sand);border:1px solid var(--sand-line);borde
 .menu a.contact:hover{background:var(--navy);color:#fff}
 .menu a[aria-current="page"]{background:var(--navy);color:#fff;box-shadow:none}
 .page[hidden]{display:none}
+body[data-view="inicio"] header.top,body[data-view="inicio"] footer{display:none}
+
+/* página de entrada */
+.welcome{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:radial-gradient(120% 70% at 50% 0%,#ffffff 0%,#f2f5f7 70%,#e9eef2 100%)}
+.welcome .wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-block:48px 32px;width:100%}
+.welcome .logo{width:clamp(150px,22vw,220px);height:auto;border-radius:50%;background:#fff;box-shadow:0 0 0 12px #fff,0 18px 40px rgba(27,59,102,.14);margin-bottom:30px}
+.welcome h1{color:var(--navy);font-size:clamp(30px,5vw,52px);font-weight:700;line-height:1.05}
+.welcome .tag{font-family:var(--font-mono);font-weight:600;text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--slate);margin-top:10px}
+.welcome .slogan{font-size:clamp(18px,2.4vw,24px);font-weight:600;color:var(--amber-ink);margin:22px 0 36px}
+.welcome .slogan::before,.welcome .slogan::after{content:"";display:inline-block;width:28px;height:2px;background:var(--gold);vertical-align:middle;margin:0 14px}
+.bigbtns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%;max-width:900px}
+.bigbtn{display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;text-decoration:none;border-radius:22px;padding:24px 24px 22px;min-height:150px;background:#fff;color:var(--navy);border:1.5px solid var(--line);transition:transform .15s,box-shadow .15s}
+.bigbtn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(27,59,102,.14)}
+.bigbtn svg{width:34px;height:34px;color:var(--slate)}
+.bigbtn b{font-size:22px;font-weight:700}
+.bigbtn .t{display:flex;flex-direction:column;gap:4px;margin-top:14px}
+.bigbtn .t span{font-size:14px;color:var(--muted)}
+.bigbtn.main{background:var(--navy);color:#fff;border-color:var(--navy)}
+.bigbtn.main svg{color:#cfe6d8}
+.bigbtn.main .t span{color:#c9d5e2}
+.bigbtn.sand{background:#f6f1e8;border-color:#efe8dc}
+.bigbtn.sand svg{color:var(--amber-ink)}
+.bigbtn.green{background:#e8f3ec;border-color:#cfe6d8}
+.bigbtn.green svg{color:var(--green)}
+.welcome .scale{width:100%}
+@media (max-width:760px){
+  .bigbtns{grid-template-columns:1fr;max-width:420px}
+  .bigbtn{min-height:0;flex-direction:row;align-items:center;gap:16px;padding:18px 20px}
+  .bigbtn svg{margin:0;flex:none}
+  .bigbtn b{margin:0;font-size:20px;display:block}
+  .bigbtn .t{margin:0}
+  .welcome .slogan{margin:18px 0 26px}
+  .welcome .slogan::before,.welcome .slogan::after{width:16px;margin:0 8px}
+}
 .about{border-top:0}
 .contact-sec{min-height:70vh}
 #catalog,#quem-somos,#contato{scroll-margin-top:72px}
@@ -239,12 +273,27 @@ footer .sel{user-select:all;color:var(--navy);font-weight:700}
   <div class="wrap">
     <a class="brand" href="#inicio" aria-label="G&amp;G, página inicial"><img src="img/logo-anim.webp" alt="" width="44" height="44"><span><b>G&amp;G</b><small>SOLUÇÕES DE MEDIÇÃO</small></span></a>
     <span class="spacer"></span>
-    <nav class="menu" aria-label="Menu"><a class="prod" href="#catalog">Produtos</a><a href="#quem-somos">Quem somos</a><a class="contact" href="#contato">Fale conosco</a></nav>
+    <nav class="menu" aria-label="Menu"><a class="prod" href="#produtos">Produtos</a><a href="#quem-somos">Quem somos</a><a class="contact" href="#contato">Fale conosco</a></nav>
   </div>
 </header>
 
-<div class="page" id="loja">
-<section class="hero" id="inicio">
+<section class="welcome page" id="inicio" aria-labelledby="w-title">
+  <div class="wrap">
+    <img class="logo" src="img/logo-anim-lg.webp" width="220" height="220" alt="Símbolo da G&amp;G">
+    <h1 id="w-title">G&amp;G</h1>
+    <div class="tag">Soluções de Medição</div>
+    <p class="slogan">Precisão que gera confiança.</p>
+    <nav class="bigbtns" aria-label="Escolha uma página">
+      <a class="bigbtn main" href="#produtos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 13l4-4M7 13h1.5M15.5 13H17M12 8v1.5"/><path d="M10 3h4M12 3v2"/></svg><span class="t"><b>Produtos</b><span>Manômetros, reguladores, solda e chopp</span></span></a>
+      <a class="bigbtn sand" href="#quem-somos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8.5" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M3 19a5.5 5.5 0 0 1 11 0M13.5 19a4.5 4.5 0 0 1 7.5-3.3"/></svg><span class="t"><b>Quem somos</b><span>A família por trás da G&amp;G</span></span></a>
+      <a class="bigbtn green" href="#contato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span class="t"><b>Fale conosco</b><span>Celular, WhatsApp, e-mail e formulário</span></span></a>
+    </nav>
+  </div>
+  <div class="scale" aria-hidden="true"></div>
+</section>
+
+<div class="page" id="loja" hidden>
+<section class="hero">
   <div class="wrap">
     <div class="copy">
       <div class="mono eyebrow">Revenda Famabras · Mais de 30 anos em instrumentação</div>
@@ -345,7 +394,7 @@ footer .sel{user-select:all;color:var(--navy);font-weight:700}
     </div>
     <div>
       <div class="mono">Navegue</div>
-      <p><a href="#catalog">Produtos</a></p>
+      <p><a href="#produtos">Produtos</a></p>
       <p><a href="#quem-somos">Quem somos</a></p>
       <p><a href="#contato">Fale conosco</a></p>
     </div>
@@ -441,10 +490,12 @@ document.getElementById("catalog").addEventListener("click",e=>{const c=e.target
 document.getElementById("q").addEventListener("input",e=>{q=e.target.value.trim();render()});
 chips();render();
 function route(){
-  const h=decodeURIComponent(location.hash.slice(1)), v=(h==="quem-somos"||h==="contato")?h:"loja";
+  const h=decodeURIComponent(location.hash.slice(1));
+  const v=(h==="quem-somos"||h==="contato")?h:(h==="produtos"||h==="catalog")?"loja":"inicio";
+  document.body.dataset.view=v;
   document.querySelectorAll(".page").forEach(p=>p.hidden=p.id!==v);
-  document.querySelectorAll(".menu a").forEach(a=>{const t=a.getAttribute("href").slice(1);const on=(t==="catalog"?"loja":t)===v;on?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current")});
-  if(h==="catalog") document.getElementById("catalog").scrollIntoView({block:"start"}); else window.scrollTo(0,0);
+  document.querySelectorAll(".menu a").forEach(a=>{const t=a.getAttribute("href").slice(1);const on=(t==="produtos"?"loja":t)===v;on?a.setAttribute("aria-current","page"):a.removeAttribute("aria-current")});
+  window.scrollTo(0,0);
 }
 window.addEventListener("hashchange",route); route();
 </script>
