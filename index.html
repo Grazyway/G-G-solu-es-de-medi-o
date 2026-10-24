@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="G&amp;G Soluções de Medição: manômetros, termômetros, reguladores de pressão Famabras, maçaricos e kits para extração de chopp. Compre pelo WhatsApp (11) 92540-0775.">
+<link rel="icon" href="img/logo.webp">
+<style>:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Loja G&amp;G Soluções de Medição</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: vitrine no padrão do portfólio G&G. Faixa azul com régua de escala, abas por linha, grade de fichas com foto em fundo cinza-aço. */
+:root{
+  --navy:#1b3b66; --steel:#96a8b6; --slate:#46586a; --green:#2e9b5b; --gold:#d4952a;
+  --bg:#ffffff; --fg:#1d2a3a; --muted:#5c6b7a; --line:#dfe5ea; --tile:#f2f5f7; --surface:#ffffff;
+  --chip:#eef2f5; --chip-on:#1b3b66; --chip-on-fg:#ffffff; --price:#1b3b66; --warn-bg:#fbf1e1; --warn-fg:#8a5a10;
+  --ok-bg:#e3f2e9; --ok-fg:#1f6e40; --info-bg:#e8eef6; --info-fg:#1b3b66;
+  --font-display:"Quicksand",ui-rounded,"Segoe UI",system-ui,sans-serif;
+  --font-body:"Quicksand",ui-rounded,"Segoe UI",system-ui,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1724; --fg:#e4ebf2; --muted:#9fb0c0; --line:#24344a; --tile:#dfe6ec; --surface:#142133;
+  --chip:#1a2a40; --chip-on:#d4952a; --chip-on-fg:#0e1724; --price:#f0f4f8; --warn-bg:#3a2a10; --warn-fg:#f2c27a;
+  --ok-bg:#12321f; --ok-fg:#8fd8ac; --info-bg:#1a2a40; --info-fg:#b9cde6; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1724; --fg:#e4ebf2; --muted:#9fb0c0; --line:#24344a; --tile:#dfe6ec; --surface:#142133;
+  --chip:#1a2a40; --chip-on:#d4952a; --chip-on-fg:#0e1724; --price:#f0f4f8; --warn-bg:#3a2a10; --warn-fg:#f2c27a;
+  --ok-bg:#12321f; --ok-fg:#8fd8ac; --info-bg:#1a2a40; --info-fg:#b9cde6; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.5;font-weight:500}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--navy)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0}
+.mono{font-family:var(--font-mono);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:11px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--navy);color:#fff}
+header.top .wrap{display:flex;align-items:center;gap:12px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand img{width:38px;height:38px}
+.brand b{font-family:var(--font-display);font-weight:700;font-size:17px;letter-spacing:.02em;white-space:nowrap}
+.brand small{display:block;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.18em;color:var(--steel)}
+.spacer{flex:1}
+.wa{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:9px 16px;font-size:14px;white-space:nowrap;border:0;cursor:pointer}
+.wa:hover{filter:brightness(1.08)}
+.wa svg{width:18px;height:18px;flex:none}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:end;padding-block:36px 0}
+.hero h1{font-size:clamp(30px,4.6vw,50px);font-weight:600;line-height:1.08}
+.hero p{color:#c8d4de;max-width:46ch;margin:14px 0 22px;font-size:16px}
+.hero .eyebrow{color:var(--gold);margin-bottom:12px}
+.hero .copy{padding-bottom:34px;min-width:0}
+.hero .shots{display:flex;align-items:flex-end;justify-content:center;gap:0;min-width:0}
+.hero .shots img{height:auto;filter:drop-shadow(0 10px 18px rgba(0,0,0,.35))}
+.hero .shots img:nth-child(1){width:30%;margin-bottom:18px}
+.hero .shots img:nth-child(2){width:40%;margin-inline:-4%;position:relative;z-index:1}
+.hero .shots img:nth-child(3){width:22%;margin-bottom:10px}
+.scale{height:22px;background:
+  repeating-linear-gradient(90deg,var(--steel) 0 1px,transparent 1px 10px) bottom/100% 7px no-repeat,
+  repeating-linear-gradient(90deg,#fff 0 1.5px,transparent 1.5px 50px) bottom/100% 14px no-repeat;
+  opacity:.7}
+.trust{display:flex;flex-wrap:wrap;gap:8px 22px;color:#dbe4ec;font-size:13.5px}
+.trust span::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:8px;vertical-align:1px}
+
+/* review bar */
+.review{background:var(--warn-bg);color:var(--warn-fg);font-size:13.5px}
+.review .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding-block:10px}
+.review p{margin:0;flex:1 1 320px;min-width:0}
+.switch{display:inline-flex;align-items:center;gap:8px;font-weight:700;cursor:pointer;white-space:nowrap}
+.switch input{width:18px;height:18px;accent-color:var(--gold)}
+
+/* filters */
+.filters{position:sticky;top:calc(env(safe-area-inset-top,0px) + 58px);z-index:4;background:var(--bg);border-bottom:1px solid var(--line)}
+.filters .wrap{display:flex;gap:12px;align-items:center;padding-block:12px;flex-wrap:wrap}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;flex:1 1 520px;min-width:0;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{border:0;background:var(--chip);color:var(--fg);font:inherit;font-weight:600;font-size:13.5px;border-radius:999px;padding:7px 14px;cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-fg)}
+.chip .n{font-family:var(--font-mono);font-size:11px;opacity:.7;margin-left:6px}
+.search{flex:0 1 260px;min-width:0;display:flex}
+.search input{width:100%;font:inherit;font-weight:500;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 14px}
+
+/* catalog */
+main{padding-block:8px 48px}
+section.cat{padding-top:30px}
+.cat-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin-bottom:16px}
+.cat-head h2{font-size:26px;font-weight:600;color:var(--fg)}
+.cat-head p{margin:0;color:var(--muted);flex:1 1 300px}
+.cat-head .mono{color:var(--green);width:100%}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.card{display:flex;flex-direction:column;background:none;border:0;padding:0;text-align:left;font:inherit;color:inherit;cursor:pointer;min-width:0}
+.ph{position:relative;aspect-ratio:1/1;max-width:100%;background:var(--tile);border-radius:14px;display:grid;place-items:center;overflow:hidden;transition:transform .2s}
+.ph img{width:78%;height:78%;object-fit:contain;transition:transform .25s}
+.card:hover .ph img{transform:scale(1.05)}
+.ph .svc{width:44%;height:44%;color:var(--navy)}
+.card .body{padding:10px 2px 0;display:flex;flex-direction:column;gap:4px;flex:1}
+.card .mono{color:var(--green);font-size:10.5px}
+.card h3{font-size:15.5px;font-weight:700;line-height:1.3}
+.price{font-family:var(--font-mono);font-weight:600;font-size:17px;color:var(--price);font-variant-numeric:tabular-nums;margin-top:auto;padding-top:4px}
+.price.ask{font-size:13px;color:var(--gold);letter-spacing:.04em}
+.var{font-size:12.5px;color:var(--muted)}
+.badge{position:absolute;left:10px;top:10px;font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:6px}
+.b-estimativa{background:var(--warn-bg);color:var(--warn-fg)}
+.b-cotacao{background:var(--info-bg);color:var(--info-fg)}
+.b-anuncio{background:var(--ok-bg);color:var(--ok-fg)}
+body:not(.reviewing) .badge,body:not(.reviewing) .rnote{display:none}
+.empty{color:var(--muted);padding:40px 0}
+
+/* dialog */
+dialog{border:0;padding:0;border-radius:18px;background:var(--surface);color:var(--fg);width:min(880px,calc(100vw - 32px));max-height:calc(100dvh - 32px)}
+dialog::backdrop{background:rgba(14,23,36,.6)}
+.dlg{display:grid;grid-template-columns:1fr 1fr;min-width:0}
+.dlg .ph{border-radius:0;aspect-ratio:auto;min-height:320px}
+.dlg .info{padding:26px 26px 24px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.dlg h2{font-size:24px;font-weight:700;line-height:1.2}
+.dlg .desc{margin:0;color:var(--muted)}
+.dlg ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.dlg .price{font-size:26px;margin:0}
+.dlg label{font-size:13px;font-weight:700;display:grid;gap:6px}
+.dlg select{font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+.dlg .actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:4px}
+.dlg .phone{font-size:13px;color:var(--muted);user-select:all}
+.close{position:absolute;right:12px;top:12px;width:36px;height:36px;border-radius:50%;border:0;background:var(--chip);color:var(--fg);font-size:20px;cursor:pointer;z-index:2}
+.rnote{background:var(--warn-bg);color:var(--warn-fg);border-radius:10px;padding:8px 12px;font-size:13px}
+.small{font-size:12px;color:var(--muted)}
+
+footer{background:var(--navy);color:#c8d4de}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px;padding-block:34px}
+footer h3{color:#fff;font-size:18px;margin-bottom:8px}
+footer p{margin:0 0 6px}
+footer .mono{color:var(--gold);margin-bottom:8px}
+footer .sel{user-select:all;color:#fff;font-weight:700}
+
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:26px}
+  .hero .copy{padding-bottom:0}
+  .hero .shots{max-width:340px;margin:0 auto}
+  .dlg{grid-template-columns:1fr}
+  .dlg .ph{min-height:220px;aspect-ratio:4/3}
+  footer .wrap{grid-template-columns:1fr}
+  .brand small{display:none}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .wa .lbl{display:none}
+  .filters{top:calc(env(safe-area-inset-top,0px) + 58px)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img src="img/logo.webp" alt=""><span><b>G&amp;G</b><small>SOLUÇÕES DE MEDIÇÃO</small></span></a>
+    <span class="spacer"></span>
+    <a class="wa" id="wa-top" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg><span class="lbl">(11) 92540-0775</span></a>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="copy">
+      <div class="mono eyebrow">Revenda Famabras · Mais de 30 anos em instrumentação</div>
+      <h1>Pressão, temperatura, soldagem e chopp</h1>
+      <p>Manômetros, termômetros, reguladores, maçaricos e equipamentos para extração de chopp, com os acessórios para instalar cada um.</p>
+      <div class="trust"><span>Produtos originais com nota fiscal</span><span>Envio para todo o Brasil</span><span>Atendimento técnico</span></div>
+    </div>
+    <div class="shots"><img src="img/hero-man.webp" alt=""><img src="img/hero-reg.webp" alt=""><img src="img/hero-ter.webp" alt=""></div>
+  </div>
+  <div class="scale" aria-hidden="true"></div>
+</section>
+
+<nav class="filters" aria-label="Linhas de produto">
+  <div class="wrap">
+    <div class="chips" id="chips" role="toolbar"></div>
+    <div class="search"><input id="q" type="search" placeholder="Buscar produto, gás, rosca…" aria-label="Buscar produto"></div>
+  </div>
+</nav>
+
+<main class="wrap" id="catalog"></main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="mono">Precisão que gera confiança.</div>
+      <h3>G&amp;G Soluções de Medição</h3>
+      <p>Empresa de família, fundada por Glemerson e Graziela. Mais de 30 anos em instrumentação industrial. Aqui você fala com quem faz o serviço e assina o laudo.</p>
+    </div>
+    <div>
+      <div class="mono">Peça sua cotação</div>
+      <p>Diga o que precisa medir ou controlar, o fluido e onde vai instalar. Indicamos o produto certo.</p>
+    </div>
+    <div>
+      <div class="mono">Contato</div>
+      <p>WhatsApp <span class="sel">(11) 92540-0775</span></p>
+      <p>E-mail <span class="sel">ggsolucoesdemedicao@gmail.com</span></p>
+      <p>Instagram <span class="sel">@ggsolucoesdemedicao</span></p>
+      <p class="small" style="color:#9fb0c0">Fotos ilustrativas. Especificações sujeitas a alteração pelo fabricante.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dlg-title"></dialog>
+
+<script>
+const DATA = {"cats": [{"id": "chopp", "name": "Chopp e post-mix", "desc": "Kits de extração, reguladores de CO₂ e peças da válvula até a torneira."}, {"id": "reguladores", "name": "Reguladores de pressão", "desc": "Para corte, soldagem, aquecimento e redes de gases."}, {"id": "solda", "name": "Maçaricos e acessórios de solda", "desc": "Maçaricos, extensões, bicos e itens de segurança oxigás."}, {"id": "manometros", "name": "Manômetros", "desc": "Manômetros, vacuômetros e manovacuômetros para cada aplicação."}, {"id": "automacao", "name": "Automação e acessórios de pressão", "desc": "Diferencial, transmissores, pressostatos e proteção do instrumento."}, {"id": "termometros", "name": "Termômetros", "desc": "Bimetálicos para leitura no local e de bulbo capilar para leitura à distância."}, {"id": "servicos", "name": "Manutenção e calibração", "desc": "Revisão, ajuste, calibração e reparo de instrumentos."}], "items": [{"cat": "chopp", "title": "Kit extratora de chopp completo para 1 barril", "desc": "Tudo o que precisa para tirar chopp de um barril tipo S. Chega pronto para montar e usar.", "bullets": ["1 válvula extratora para barril tipo S", "1 mini regulador de CO₂ Famabras pré-calibrado, saída engate rápido", "2 mangueiras tubo de 1,5 m", "3 engates rápidos 3/8\" x rosca 5/8\"", "1 engate pino curvo 3/8\""], "price": 490.0, "origem": "cotacao", "img": "img/kit1.webp", "variants": null, "id": "kit-extratora-de-chopp-completo-para-1-barril"}, {"cat": "chopp", "title": "Kit completo para 2 barris de chopp", "desc": "Para quem serve dois chopps ao mesmo tempo, com um cilindro só.", "bullets": ["1 regulador Famabras pré-calibrado com 2 saídas (registro e engate rápido)", "2 válvulas extratoras com engates rápidos", "4 mangueiras de 1,5 m com engates rápidos"], "price": 765.0, "origem": "cotacao", "img": "img/kit2.webp", "variants": null, "id": "kit-completo-para-2-barris-de-chopp"}, {"cat": "chopp", "title": "Regulador CO₂ para chopp Famabras FR-430, 1 via, pré-calibrado 2,5 kgf/cm²", "desc": "Sai de fábrica ajustado em 2,5 kgf/cm²: é só instalar no cilindro e usar.", "bullets": ["Gás: CO₂", "1 saída, pressão fixa 2,5 kgf/cm²", "Saída rosca 1/4\" NPT fêmea", "Ideal para bares, eventos e chopeiras"], "price": 249.9, "origem": "anuncio", "img": "img/117.webp", "variants": null, "id": "regulador-co2-para-chopp-famabras-fr-430-1-via-pre-calibrado-2-5-kgf-c"}, {"cat": "chopp", "title": "Regulador CO₂ para chopp Famabras FR-430, 1 via, ajustável", "desc": "Regulador com ajuste de pressão para chopeiras, bares, eventos e cervejeiros caseiros.", "bullets": ["Gás: CO₂", "1 saída, pressão ajustável até 5 kgf/cm²", "Manômetro de 41 mm, canopla em plástico", "Saída rosca 1/4\" NPT fêmea"], "price": 299.9, "origem": "anuncio", "img": "img/115.webp", "variants": null, "id": "regulador-co2-para-chopp-famabras-fr-430-1-via-ajustavel"}, {"cat": "chopp", "title": "Mini regulador CO₂ Famabras pré-calibrado, saída engate rápido", "desc": "O mesmo regulador que vai no kit, vendido separado para repor ou montar o seu.", "bullets": ["Original Famabras", "Pré-calibrado, sem ajuste", "Saída com engate rápido para mangueira 3/8\""], "price": 215.0, "origem": "cotacao", "img": "img/117.webp", "variants": null, "id": "mini-regulador-co2-famabras-pre-calibrado-saida-engate-rapido"}, {"cat": "chopp", "title": "Regulador CO₂ Famabras FR-420 pré-calibrado, 1 saída niple", "desc": "Modelo padrão convencional, robusto, com canopla em zamak.", "bullets": ["Manômetro de 52 mm", "Pré-calibrado em 2,5 kgf/cm²", "1 saída com niple para mangueira trançada"], "price": 255.0, "origem": "cotacao", "img": "img/113.webp", "variants": null, "id": "regulador-co2-famabras-fr-420-pre-calibrado-1-saida-niple"}, {"cat": "chopp", "title": "Válvula extratora de chopp tipo S", "desc": "Extratora para barril tipo S, o padrão das principais cervejarias do Brasil.", "bullets": ["Encaixe tipo S", "Saídas para gás e chopp", "Compatível com engates 3/8\" x rosca 5/8\""], "price": 169.9, "origem": "cotacao", "img": "img/123.webp", "variants": null, "id": "valvula-extratora-de-chopp-tipo-s"}, {"cat": "chopp", "title": "Mangueira tubo 3/8\" para chopp e CO₂, rolo de 50 m", "desc": "Mangueira para linhas de chopp e de gás. Corte no tamanho que precisar.", "bullets": ["Diâmetro 3/8\"", "Rolo com 50 metros"], "price": 249.9, "origem": "cotacao", "img": "img/129.webp", "variants": null, "id": "mangueira-tubo-3-8-para-chopp-e-co2-rolo-de-50-m"}, {"cat": "chopp", "title": "Engate rápido rosca 1/4\" fêmea x tubo 3/8\"", "desc": "Engate rápido para ligar a mangueira 3/8\" a uma rosca 1/4\".", "bullets": ["Rosca 1/4\" fêmea", "Tubo 3/8\""], "price": 15.5, "origem": "cotacao", "img": "img/125.webp", "variants": null, "id": "engate-rapido-rosca-1-4-femea-x-tubo-3-8"}, {"cat": "chopp", "title": "Engate para extratora rosca 5/8\" x tubo 3/8\"", "desc": "Liga a mangueira 3/8\" à válvula extratora.", "bullets": ["Rosca 5/8\"", "Tubo 3/8\""], "price": 14.9, "origem": "cotacao", "img": "img/125.webp", "variants": null, "id": "engate-para-extratora-rosca-5-8-x-tubo-3-8"}, {"cat": "chopp", "title": "Engate rápido simples rosca 1/4\" NPT x tubo 3/8\"", "desc": "Engate rápido para a saída do regulador.", "bullets": ["Rosca 1/4\" NPT", "Tubo 3/8\""], "price": 11.9, "origem": "cotacao", "img": "img/125.webp", "variants": null, "id": "engate-rapido-simples-rosca-1-4-npt-x-tubo-3-8"}, {"cat": "chopp", "title": "Engate pino curvo 3/8\"", "desc": "Conexão curva para mangueira 3/8\", evita dobras na linha.", "bullets": ["Tubo 3/8\""], "price": 11.5, "origem": "cotacao", "img": "img/125.webp", "variants": null, "id": "engate-pino-curvo-3-8"}, {"cat": "chopp", "title": "Regulador série 400 para gaseificação e post-mix", "desc": "Para bebidas gaseificadas e máquinas de post-mix.", "bullets": ["Saída até 10 kgf/cm²", "CO₂"], "price": null, "origem": "consulta", "img": "img/111.webp", "variants": null, "id": "regulador-serie-400-para-gaseificacao-e-post-mix"}, {"cat": "chopp", "title": "Régua manifold para CO₂", "desc": "Várias saídas a partir de um único cilindro, cada uma com seu registro.", "bullets": ["Entrada até 80 kgf/cm²"], "price": null, "origem": "consulta", "img": "img/119.webp", "variants": null, "id": "regua-manifold-para-co2"}, {"cat": "chopp", "title": "Régua manifold para nitrogênio", "desc": "Para extração com N₂, com várias saídas a partir de um cilindro.", "bullets": ["Entrada até 220 kgf/cm²"], "price": null, "origem": "consulta", "img": "img/121.webp", "variants": null, "id": "regua-manifold-para-nitrogenio"}, {"cat": "chopp", "title": "Torneira para chopp", "desc": "Torneira para chopeira e coluna.", "bullets": [], "price": null, "origem": "consulta", "img": "img/131.webp", "variants": null, "id": "torneira-para-chopp"}, {"cat": "chopp", "title": "Chicote flexível para chopp", "desc": "Ligação flexível entre cilindro e regulador.", "bullets": [], "price": null, "origem": "consulta", "img": "img/127.webp", "variants": null, "id": "chicote-flexivel-para-chopp"}, {"cat": "chopp", "title": "Registro de saída para chopp", "desc": "Registro para abrir e fechar cada linha de gás.", "bullets": [], "price": null, "origem": "consulta", "img": "img/133.webp", "variants": null, "id": "registro-de-saida-para-chopp"}, {"cat": "reguladores", "title": "Regulador de pressão para acetileno Famabras RI-03A", "desc": "Simples estágio para solda, corte e aquecimento oxiacetilênico.", "bullets": ["Gás: acetileno (C₂H₂)", "Vazão máxima 8 m³/h", "Corpo e canopla em alumínio", "Válvula de segurança interna", "Manômetros de alta e baixa pressão"], "price": 164.9, "origem": "anuncio", "img": "img/059.webp", "variants": null, "id": "regulador-de-pressao-para-acetileno-famabras-ri-03a"}, {"cat": "reguladores", "title": "Regulador de pressão para oxigênio Famabras RI-16A", "desc": "Simples estágio para conjuntos de solda, corte e aquecimento oxigás.", "bullets": ["Gás: oxigênio (O₂)", "Vazão máxima 30 m³/h", "Corpo e canopla em alumínio", "Válvula de segurança interna e de alívio externa"], "price": 179.9, "origem": "anuncio", "img": "img/059.webp", "variants": null, "id": "regulador-de-pressao-para-oxigenio-famabras-ri-16a"}, {"cat": "reguladores", "title": "Regulador de pressão para argônio Famabras RI-30A", "desc": "Para solda MIG/MAG e TIG, com leitura de vazão direto no manômetro de saída.", "bullets": ["Entrada máxima 220 kgf/cm²", "Vazão 0 a 40 L/min", "Manômetros de 52 mm", "Saída 9/16\" UNF-18 com bico para mangueira 5/16\""], "price": 164.9, "origem": "anuncio", "img": "img/059.webp", "variants": null, "id": "regulador-de-pressao-para-argonio-famabras-ri-30a"}, {"cat": "reguladores", "title": "Regulador de pressão para nitrogênio Famabras RI-40A", "desc": "Simples estágio para linhas de solda e processos industriais com nitrogênio.", "bullets": ["Gás: nitrogênio (N₂)", "Vazão máxima 30 m³/h", "Corpo e canopla em alumínio"], "price": 174.9, "origem": "anuncio", "img": "img/059.webp", "variants": null, "id": "regulador-de-pressao-para-nitrogenio-famabras-ri-40a"}, {"cat": "reguladores", "title": "Regulador de pressão para CO₂ Famabras RI-50A", "desc": "Simples estágio para gás carbônico, ideal para solda MIG/MAG.", "bullets": ["Entrada máxima 90 kgf/cm²", "Saída até 8 kgf/cm²", "Vazão máxima 34 L/min", "Entrada 0,830\"-14NGO (ABNT 209-1)"], "price": 174.9, "origem": "anuncio", "img": "img/059.webp", "variants": null, "id": "regulador-de-pressao-para-co2-famabras-ri-50a"}, {"cat": "reguladores", "title": "Regulador de pressão para GLP Famabras RI-45B", "desc": "Para GLP e gás natural em solda, corte e aquecimento.", "bullets": ["Saída 5 kgf/cm²", "Vazão máxima 30 kg/h", "Conexões rosca interna 1/4\" NPT", "Corpo em latão forjado"], "price": 199.9, "origem": "anuncio", "img": "img/057.webp", "variants": null, "id": "regulador-de-pressao-para-glp-famabras-ri-45b"}, {"cat": "reguladores", "title": "Regulador de nitrogênio alta pressão Famabras RI-740, 50 kgf/cm²", "desc": "Muito usado em teste de estanqueidade, refrigeração e ar-condicionado.", "bullets": ["Entrada máxima 220 kgf/cm²", "Saída ajustável até 50 kgf/cm² (700 psi)", "Manômetros de 52 mm", "Corpo em latão"], "price": 789.9, "origem": "anuncio", "img": "img/067.webp", "variants": null, "id": "regulador-de-nitrogenio-alta-pressao-famabras-ri-740-50-kgf-cm2"}, {"cat": "reguladores", "title": "Regulador série 10 para ar comprimido", "desc": "Para redes de ar comprimido.", "bullets": ["Saída até 5 kgf/cm²"], "price": null, "origem": "consulta", "img": "img/055.webp", "variants": null, "id": "regulador-serie-10-para-ar-comprimido"}, {"cat": "reguladores", "title": "Regulador série 200 Posto para rede de gases", "desc": "Instalado no ponto de consumo da rede.", "bullets": ["Entrada até 25 kgf/cm²"], "price": null, "origem": "consulta", "img": "img/061.webp", "variants": null, "id": "regulador-serie-200-posto-para-rede-de-gases"}, {"cat": "reguladores", "title": "Regulador série 300 duplo estágio", "desc": "Mais precisão em baixa pressão.", "bullets": ["Saída até 2 kgf/cm²"], "price": null, "origem": "consulta", "img": "img/063.webp", "variants": null, "id": "regulador-serie-300-duplo-estagio"}, {"cat": "reguladores", "title": "Regulador série 600 com fluxômetro", "desc": "Para argônio e CO₂, com vazão lida em L/min.", "bullets": ["Vazão até 30 L/min"], "price": null, "origem": "consulta", "img": "img/065.webp", "variants": null, "id": "regulador-serie-600-com-fluxometro"}, {"cat": "reguladores", "title": "Regulador série 500 alta vazão", "desc": "Para CO₂ e oxigênio em alto consumo.", "bullets": ["Vazão até 120 m³/h"], "price": null, "origem": "consulta", "img": "img/069.webp", "variants": null, "id": "regulador-serie-500-alta-vazao"}, {"cat": "reguladores", "title": "Regulador série 800 alta vazão", "desc": "Para ar, argônio, nitrogênio e oxigênio.", "bullets": ["Vazão até 120 m³/h"], "price": null, "origem": "consulta", "img": "img/071.webp", "variants": null, "id": "regulador-serie-800-alta-vazao"}, {"cat": "reguladores", "title": "Regulador GLP alta vazão", "desc": "Para GLP e gás natural em grande consumo.", "bullets": ["Vazão até 100 kg/h"], "price": null, "origem": "consulta", "img": "img/073.webp", "variants": null, "id": "regulador-glp-alta-vazao"}, {"cat": "reguladores", "title": "Central de cilindros série Industrial", "desc": "Para ar, argônio, CO₂, hidrogênio, hélio, N₂ e O₂.", "bullets": ["Saída até 10 kgf/cm²"], "price": null, "origem": "consulta", "img": "img/075.webp", "variants": null, "id": "central-de-cilindros-serie-industrial"}, {"cat": "solda", "title": "Maçarico de corte 3 canos MC-03S", "desc": "Maçarico de corte oxigás com 3 tubos.", "bullets": ["Oxi-acetileno e oxi-GLP"], "price": null, "origem": "consulta", "img": "img/079.webp", "variants": null, "id": "macarico-de-corte-3-canos-mc-03s"}, {"cat": "solda", "title": "Cabeça cortadora 3 canos", "desc": "Encaixa no punho do maçarico de solda e transforma em maçarico de corte.", "bullets": [], "price": null, "origem": "consulta", "img": "img/081.webp", "variants": null, "id": "cabeca-cortadora-3-canos"}, {"cat": "solda", "title": "Maçarico de solda 200 (base importada)", "desc": "Punho de solda série 200, compatível com as extensões 200.", "bullets": ["Oxi-acetileno e oxi-GLP"], "price": null, "origem": "consulta", "img": "img/077.webp", "variants": null, "id": "macarico-de-solda-200-base-importada"}, {"cat": "solda", "title": "Extensão para maçarico 200, acetileno", "desc": "Extensão de solda para o maçarico série 200.", "bullets": ["Escolha o número do bico"], "price": null, "origem": "consulta", "img": "img/089.webp", "variants": "Nº 2 · 4 · 6 · 9", "id": "extensao-para-macarico-200-acetileno"}, {"cat": "solda", "title": "Extensão Soldox 200 P", "desc": "Extensão de solda Soldox série 200 P.", "bullets": ["Escolha o número do bico"], "price": null, "origem": "consulta", "img": "img/089.webp", "variants": "Nº 2 · 4 · 6 · 9", "id": "extensao-soldox-200-p"}, {"cat": "solda", "title": "Extensão para maçarico 201, acetileno", "desc": "Extensão de solda para o maçarico série 201.", "bullets": ["Escolha o número do bico"], "price": null, "origem": "consulta", "img": "img/089.webp", "variants": "Nº 2 · 4 · 6 · 9", "id": "extensao-para-macarico-201-acetileno"}, {"cat": "solda", "title": "Extensão Soldox 201 P", "desc": "Extensão de solda Soldox série 201 P.", "bullets": ["Escolha o número do bico"], "price": null, "origem": "consulta", "img": "img/089.webp", "variants": "Nº 2 · 4 · 6 · 9", "id": "extensao-soldox-201-p"}, {"cat": "solda", "title": "Bico de corte série 1502", "desc": "Bico de corte para maçarico.", "bullets": ["Escolha o número"], "price": null, "origem": "consulta", "img": "img/087.webp", "variants": "Nº 2 · 4 · 6 · 8", "id": "bico-de-corte-serie-1502"}, {"cat": "solda", "title": "Bico de corte série 1503", "desc": "Bico de corte para maçarico.", "bullets": ["Escolha o número"], "price": null, "origem": "consulta", "img": "img/087.webp", "variants": "Nº 2 · 4 · 6 · 8", "id": "bico-de-corte-serie-1503"}, {"cat": "solda", "title": "Válvula corta-chama para regulador de acetileno/GLP", "desc": "Montada na saída do regulador de gás combustível. Impede o retrocesso de chama.", "bullets": ["Item de segurança obrigatório em conjuntos oxigás"], "price": null, "origem": "consulta", "img": "img/091.webp", "variants": null, "id": "valvula-corta-chama-para-regulador-de-acetileno-glp"}, {"cat": "solda", "title": "Válvula corta-chama para regulador de oxigênio", "desc": "Montada na saída do regulador de oxigênio. Impede o retrocesso de chama.", "bullets": ["Item de segurança obrigatório em conjuntos oxigás"], "price": null, "origem": "consulta", "img": "img/091.webp", "variants": null, "id": "valvula-corta-chama-para-regulador-de-oxigenio"}, {"cat": "solda", "title": "Válvula corta-chama para maçarico, acetileno/GLP", "desc": "Montada na entrada de gás combustível do maçarico. Impede o retrocesso de chama.", "bullets": ["Item de segurança obrigatório em conjuntos oxigás"], "price": null, "origem": "consulta", "img": "img/091.webp", "variants": null, "id": "valvula-corta-chama-para-macarico-acetileno-glp"}, {"cat": "solda", "title": "Válvula corta-chama para maçarico, oxigênio", "desc": "Montada na entrada de oxigênio do maçarico. Impede o retrocesso de chama.", "bullets": ["Item de segurança obrigatório em conjuntos oxigás"], "price": null, "origem": "consulta", "img": "img/091.webp", "variants": null, "id": "valvula-corta-chama-para-macarico-oxigenio"}, {"cat": "solda", "title": "Agulheiro para limpeza de bicos", "desc": "Jogo de agulhas para desentupir bicos de solda e corte.", "bullets": [], "price": null, "origem": "consulta", "img": "img/103.webp", "variants": null, "id": "agulheiro-para-limpeza-de-bicos"}, {"cat": "solda", "title": "Acendedor para maçarico tipo concha", "desc": "Acendedor de faísca, sem chama na mão.", "bullets": [], "price": null, "origem": "consulta", "img": "img/105.webp", "variants": null, "id": "acendedor-para-macarico-tipo-concha"}, {"cat": "solda", "title": "Conjunto PPU oxi-acetileno", "desc": "Maçarico FMA-201, reguladores, cilindros e carrinho.", "bullets": ["Extensões nº 2 e 6"], "price": null, "origem": "consulta", "img": "img/083.webp", "variants": null, "id": "conjunto-ppu-oxi-acetileno"}, {"cat": "solda", "title": "Conjunto PPU oxi-GLP", "desc": "Maçarico FMA-200, reguladores, cilindros e carrinho.", "bullets": ["Extensões nº 2 e 6"], "price": null, "origem": "consulta", "img": "img/085.webp", "variants": null, "id": "conjunto-ppu-oxi-glp"}, {"cat": "solda", "title": "Mangueira dupla para solda", "desc": "Mangueira gêmea para oxigênio e gás combustível.", "bullets": [], "price": null, "origem": "consulta", "img": "img/093.webp", "variants": null, "id": "mangueira-dupla-para-solda"}, {"cat": "solda", "title": "Registro para gases", "desc": "Registro de bloqueio para linhas de gás.", "bullets": [], "price": null, "origem": "consulta", "img": "img/095.webp", "variants": null, "id": "registro-para-gases"}, {"cat": "solda", "title": "Chicote flexível", "desc": "Ligação flexível entre cilindro e central.", "bullets": [], "price": null, "origem": "consulta", "img": "img/097.webp", "variants": null, "id": "chicote-flexivel"}, {"cat": "solda", "title": "Economizador de gás", "desc": "Corta o gás quando o maçarico é pendurado.", "bullets": [], "price": null, "origem": "consulta", "img": "img/099.webp", "variants": null, "id": "economizador-de-gas"}, {"cat": "solda", "title": "Arame de solda", "desc": "Arame para solda MIG.", "bullets": [], "price": null, "origem": "consulta", "img": "img/101.webp", "variants": null, "id": "arame-de-solda"}, {"cat": "solda", "title": "Ramal para rede de gases", "desc": "Ponto de consumo para rede de gases.", "bullets": [], "price": null, "origem": "consulta", "img": "img/107.webp", "variants": null, "id": "ramal-para-rede-de-gases"}, {"cat": "solda", "title": "Cilindro de gás", "desc": "Cilindros para oxigênio, acetileno e outros gases.", "bullets": [], "price": null, "origem": "consulta", "img": "img/109.webp", "variants": null, "id": "cilindro-de-gas"}, {"cat": "manometros", "title": "Manômetro 100 mm Classe A, rosca 1/2\" BSP, 0 a 150 psi", "desc": "Manômetro de uso geral com restritor de pressão, para linhas de ar, água e óleo.", "bullets": ["Mostrador 100 mm, Classe A", "Escala 0 a 150 psi / 0 a 10 kgf/cm²", "Internos em latão, caixa em aço carbono", "Conexão reta 1/2\" BSP", "Sem glicerina"], "price": 99.9, "origem": "cotacao", "img": "img/011.webp", "variants": null, "id": "manometro-100-mm-classe-a-rosca-1-2-bsp-0-a-150-psi"}, {"cat": "manometros", "title": "Manômetro 100 mm Classe A, rosca 1/4\" NPT, 0 a 150 psi", "desc": "Mesmo modelo, com conexão 1/4\" NPT.", "bullets": ["Mostrador 100 mm, Classe A", "Escala 0 a 150 psi / 0 a 10 kgf/cm²", "Internos em latão, caixa em aço carbono", "Conexão reta 1/4\" NPT", "Sem glicerina"], "price": 114.9, "origem": "cotacao", "img": "img/011.webp", "variants": null, "id": "manometro-100-mm-classe-a-rosca-1-4-npt-0-a-150-psi"}, {"cat": "manometros", "title": "Manômetro linha Standard", "desc": "Uso geral: linhas pneumáticas e hidráulicas, máquinas e equipamentos.", "bullets": ["Ø 41 a 300 mm", "Com glicerina ou silicone para vibração"], "price": null, "origem": "consulta", "img": "img/011.webp", "variants": null, "id": "manometro-linha-standard"}, {"cat": "manometros", "title": "Manômetro linha Petroquímica, todo em inox", "desc": "Para fluidos corrosivos, química, petroquímica e alimentos.", "bullets": ["Ø 52 a 300 mm"], "price": null, "origem": "consulta", "img": "img/013.webp", "variants": null, "id": "manometro-linha-petroquimica-todo-em-inox"}, {"cat": "manometros", "title": "Manômetro linha Painel", "desc": "Fixação rígida em painel com garras e parafusos traseiros.", "bullets": ["Ø 52 a 114 mm e 96x96"], "price": null, "origem": "consulta", "img": "img/015.webp", "variants": null, "id": "manometro-linha-painel"}, {"cat": "manometros", "title": "Manômetro Capsular para baixa pressão", "desc": "Papel e celulose, gráficas, chaminés e gases de baixa pressão.", "bullets": ["Ø 62 · 100 · 114 · 160 mm"], "price": null, "origem": "consulta", "img": "img/017.webp", "variants": null, "id": "manometro-capsular-para-baixa-pressao"}, {"cat": "manometros", "title": "Manômetro para refrigeração", "desc": "Escalas de pressão e temperatura do gás refrigerante.", "bullets": ["Ø 52 a 160 mm"], "price": null, "origem": "consulta", "img": "img/019.webp", "variants": null, "id": "manometro-para-refrigeracao"}, {"cat": "manometros", "title": "Manômetro de laboratório, alta precisão", "desc": "Para calibração, testes e inspeção, com faixa espelhada contra erro de paralaxe.", "bullets": ["Ø 160 mm"], "price": null, "origem": "consulta", "img": "img/021.webp", "variants": null, "id": "manometro-de-laboratorio-alta-precisao"}, {"cat": "automacao", "title": "Manômetro de pressão diferencial", "desc": "Para filtros, vazão e nível de tanques.", "bullets": ["Estática até 200 bar"], "price": null, "origem": "consulta", "img": "img/023.webp", "variants": null, "id": "manometro-de-pressao-diferencial"}, {"cat": "automacao", "title": "Manômetro com transmissão mecânica por diafragma", "desc": "Baixa pressão e fluidos que não cristalizam.", "bullets": ["Proteção 5× o fundo de escala"], "price": null, "origem": "consulta", "img": "img/025.webp", "variants": null, "id": "manometro-com-transmissao-mecanica-por-diafragma"}, {"cat": "automacao", "title": "Transmissor de pressão FTP-420", "desc": "Sensor piezoresistivo em invólucro de inox.", "bullets": ["Saída 4 a 20 mA", "Alimentação 11 a 28 Vcc"], "price": null, "origem": "consulta", "img": "img/027.webp", "variants": null, "id": "transmissor-de-pressao-ftp-420"}, {"cat": "automacao", "title": "Pressostato FPB", "desc": "Controle, parada ou alarme por set-point.", "bullets": ["Ajuste de 25 a 100 % da faixa"], "price": null, "origem": "consulta", "img": "img/029.webp", "variants": null, "id": "pressostato-fpb"}, {"cat": "automacao", "title": "Selo diafragma", "desc": "Isola o instrumento de ataques químicos.", "bullets": [], "price": null, "origem": "consulta", "img": "img/031.webp", "variants": null, "id": "selo-diafragma"}, {"cat": "automacao", "title": "Limitador de pressão", "desc": "Protege o instrumento contra pressão acima da faixa.", "bullets": [], "price": null, "origem": "consulta", "img": "img/033.webp", "variants": null, "id": "limitador-de-pressao"}, {"cat": "automacao", "title": "Válvula agulha", "desc": "Permite retirar o instrumento sem parar o processo.", "bullets": [], "price": null, "origem": "consulta", "img": "img/035.webp", "variants": null, "id": "valvula-agulha"}, {"cat": "automacao", "title": "Amortecedor de pulsação", "desc": "Elimina surtos e pulsos de pressão.", "bullets": [], "price": null, "origem": "consulta", "img": "img/037.webp", "variants": null, "id": "amortecedor-de-pulsacao"}, {"cat": "automacao", "title": "Tubo sifão", "desc": "Protege o manômetro do vapor e da alta temperatura.", "bullets": [], "price": null, "origem": "consulta", "img": "img/039.webp", "variants": null, "id": "tubo-sifao"}, {"cat": "termometros", "title": "Termômetro bimetálico frigorífico", "desc": "Para laboratórios e alimentos, haste em inox com ponta para congelados.", "bullets": ["Ø 33 · 41 · 52 mm"], "price": null, "origem": "consulta", "img": "img/041.webp", "variants": null, "id": "termometro-bimetalico-frigorifico"}, {"cat": "termometros", "title": "Termômetro bimetálico industrial", "desc": "Para fornos e caldeiras, haste e conexão em latão.", "bullets": ["Ø 52 a 200 mm"], "price": null, "origem": "consulta", "img": "img/043.webp", "variants": null, "id": "termometro-bimetalico-industrial"}, {"cat": "termometros", "title": "Termômetro bimetálico petroquímico, todo em inox", "desc": "Capa baioneta para limpeza e ajuste do ponteiro.", "bullets": ["Ø 62 a 160 mm"], "price": null, "origem": "consulta", "img": "img/045.webp", "variants": null, "id": "termometro-bimetalico-petroquimico-todo-em-inox"}, {"cat": "termometros", "title": "Termômetro de bulbo capilar industrial", "desc": "Leitura à distância no painel, bulbo em cobre ou inox.", "bullets": ["Ø 52 a 160 mm e 96x96"], "price": null, "origem": "consulta", "img": "img/047.webp", "variants": null, "id": "termometro-de-bulbo-capilar-industrial"}, {"cat": "termometros", "title": "Termômetro de bulbo capilar para refrigeração", "desc": "Câmaras e balcões frios, resposta rápida, gás inerte sem CFC.", "bullets": ["Ø 52 a 100 mm"], "price": null, "origem": "consulta", "img": "img/049.webp", "variants": null, "id": "termometro-de-bulbo-capilar-para-refrigeracao"}, {"cat": "termometros", "title": "Termômetro linha Capela", "desc": "Máquinas e climatização, resiste a vibração. Reto ou angular.", "bullets": ["Ø 110 mm"], "price": null, "origem": "consulta", "img": "img/051.webp", "variants": null, "id": "termometro-linha-capela"}, {"cat": "termometros", "title": "Poço de proteção para termômetro", "desc": "Isola a haste do fluido e permite trocar o termômetro sem parar o processo.", "bullets": [], "price": null, "origem": "consulta", "img": "img/053.webp", "variants": null, "id": "poco-de-protecao-para-termometro"}, {"cat": "servicos", "title": "Manutenção de reguladores de pressão", "desc": "Seu regulador volta funcionando como novo, testado em pressão.", "bullets": ["Troca dos reparos centrais", "Troca dos reparos da válvula de segurança", "Substituição de componentes oxidados", "Teste de pressão"], "price": null, "origem": "consulta", "img": null, "variants": null, "id": "manutencao-de-reguladores-de-pressao"}, {"cat": "servicos", "title": "Calibração e reparo de instrumentos", "desc": "Revisão, ajuste, calibração e reparo de manômetros, termômetros e reguladores, feitos por quem assina o laudo.", "bullets": ["Mais de 30 anos em instrumentação industrial"], "price": null, "origem": "consulta", "img": null, "variants": null, "id": "calibracao-e-reparo-de-instrumentos"}]};
+const WA = "5511925400775";
+const brl = v => v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const waLink = msg => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+const ORIG = {anuncio:"Planilha de anúncios",cotacao:"Cotação",estimativa:"Estimativa",consulta:""};
+const SVC = '<svg class="svc" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><circle cx="32" cy="34" r="20"/><path d="M32 34l10-10M18 34h4M42 34h4M32 20v4"/><path d="M26 10h12M32 10v4"/></svg>';
+const catName = Object.fromEntries(DATA.cats.map(c=>[c.id,c.name]));
+let cur = "todos", q = "";
+
+document.getElementById("wa-top").href = waLink("Olá! Vim pelo site da G&G e gostaria de uma cotação.");
+
+function norm(s){return s.normalize("NFD").replace(/\p{M}/gu,"").toLowerCase()}
+function matches(it){
+  if(cur!=="todos" && it.cat!==cur) return false;
+  if(!q) return true;
+  return norm([it.title,it.desc,it.bullets.join(" "),it.variants||""].join(" ")).includes(norm(q));
+}
+function chips(){
+  const el=document.getElementById("chips");
+  const all=[{id:"todos",name:"Todos",n:DATA.items.length},...DATA.cats.map(c=>({...c,n:DATA.items.filter(i=>i.cat===c.id).length}))];
+  el.innerHTML=all.map(c=>`<button class="chip" data-c="${c.id}" aria-pressed="${c.id===cur}">${esc(c.name)}<span class="n">${c.n}</span></button>`).join("");
+}
+function card(it){
+  const idx=DATA.items.indexOf(it);
+  const badge=it.origem!=="consulta"?`<span class="badge b-${it.origem}">${ORIG[it.origem]}</span>`:"";
+  const img=it.img?`<img src="${it.img}" alt="" loading="lazy">`:SVC;
+  const price=it.price?`<div class="price">${brl(it.price)}</div>`:`<div class="price ask">${it.cat==="servicos"?"SOB ORÇAMENTO":"SOB CONSULTA"}</div>`;
+  return `<button class="card" data-i="${idx}"><div class="ph">${img}${badge}</div><div class="body"><span class="mono">${esc(catName[it.cat])}</span><h3>${esc(it.title)}</h3>${it.variants?`<span class="var">${esc(it.variants)}</span>`:""}${price}</div></button>`;
+}
+function render(){
+  const main=document.getElementById("catalog");
+  const html=DATA.cats.map(c=>{
+    const list=DATA.items.filter(i=>i.cat===c.id&&matches(i));
+    if(!list.length) return "";
+    return `<section class="cat" id="${c.id}"><div class="cat-head"><span class="mono">${list.filter(i=>i.price).length} com preço · ${list.length} anúncios</span><h2>${esc(c.name)}</h2><p>${esc(c.desc)}</p></div><div class="grid">${list.map(card).join("")}</div></section>`;
+  }).join("");
+  main.innerHTML=html||`<p class="empty">Nenhum produto encontrado para “${esc(q)}”. Fale com a gente no WhatsApp que procuramos para você.</p>`;
+}
+function open(i){
+  const it=DATA.items[i], d=document.getElementById("dlg");
+  const vs=it.variants?it.variants.replace(/^Nº\s*/,"").split("·").map(s=>s.trim()):null;
+  const img=it.img?`<img src="${it.img}" alt="${esc(it.title)}">`:SVC;
+  const isSvc=it.cat==="servicos";
+  const btn=it.price?"Comprar pelo WhatsApp":(isSvc?"Pedir orçamento":"Pedir cotação");
+  const note=it.origem!=="consulta"||it.nota?`<div class="rnote"><strong>Revisão:</strong> ${esc(ORIG[it.origem]||"Sem preço")}${it.nota?". "+esc(it.nota):""}${it.origem==="estimativa"?". Preço estimado, confirmar antes de publicar.":""}</div>`:"";
+  d.innerHTML=`<div class="dlg"><div class="ph">${img}</div><div class="info">
+    <span class="mono" style="color:var(--green)">${esc(catName[it.cat])}</span>
+    <h2 id="dlg-title">${esc(it.title)}</h2>
+    <p class="desc">${esc(it.desc)}</p>
+    ${it.bullets.length?`<ul>${it.bullets.map(b=>`<li>${esc(b)}</li>`).join("")}</ul>`:""}
+    ${vs?`<label for="vsel">Número<select id="vsel">${vs.map(v=>`<option>Nº ${esc(v)}</option>`).join("")}</select></label>`:""}
+    ${it.price?`<p class="price">${brl(it.price)}</p>`:`<p class="price ask">${isSvc?"SOB ORÇAMENTO":"SOB CONSULTA"}</p>`}
+    <div class="actions"><a class="wa" id="buy" target="_blank" rel="noopener">${btn}</a><span class="phone">(11) 92540-0775</span></div>
+    ${note}
+    <p class="small">Produto original, com nota fiscal. Foto ilustrativa.</p>
+  </div></div><button class="close" aria-label="Fechar">×</button>`;
+  const buy=d.querySelector("#buy"), sel=d.querySelector("#vsel");
+  const upd=()=>{const v=sel?` (${sel.value})`:"";buy.href=waLink(it.price?`Olá! Quero comprar: ${it.title}${v}, ${brl(it.price)}.`:`Olá! Gostaria de uma cotação de: ${it.title}${v}.`)};
+  upd(); if(sel) sel.addEventListener("change",upd);
+  d.querySelector(".close").onclick=()=>d.close();
+  d.showModal();
+}
+document.getElementById("dlg").addEventListener("click",e=>{if(e.target.id==="dlg")e.target.close()});
+document.getElementById("chips").addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;cur=b.dataset.c;chips();render();document.getElementById("catalog").scrollIntoView({block:"start"})});
+document.getElementById("catalog").addEventListener("click",e=>{const c=e.target.closest(".card");if(c)open(+c.dataset.i)});
+document.getElementById("q").addEventListener("input",e=>{q=e.target.value.trim();render()});
+chips();render();
+</script>
+
+</body>
+</html>
