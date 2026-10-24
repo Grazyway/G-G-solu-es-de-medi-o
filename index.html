@@ -85,37 +85,34 @@ section.cat#chopp{background:var(--sand);border:1px solid var(--sand-line);borde
 .page[hidden]{display:none}
 body[data-view="inicio"] header.top,body[data-view="inicio"] footer{display:none}
 
-/* página de entrada */
-.welcome{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:radial-gradient(120% 70% at 50% 0%,#ffffff 0%,#f2f5f7 70%,#e9eef2 100%)}
-.welcome .wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-block:48px 32px;width:100%}
-.welcome .logo{width:clamp(150px,22vw,220px);height:auto;border-radius:50%;background:#fff;box-shadow:0 0 0 12px #fff,0 18px 40px rgba(27,59,102,.14);margin-bottom:30px}
-.welcome h1{color:var(--navy);font-size:clamp(30px,5vw,52px);font-weight:700;line-height:1.05}
-.welcome .tag{font-family:var(--font-mono);font-weight:600;text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--slate);margin-top:10px}
-.welcome .slogan{font-size:clamp(18px,2.4vw,24px);font-weight:600;color:var(--amber-ink);margin:22px 0 36px}
-.welcome .slogan::before,.welcome .slogan::after{content:"";display:inline-block;width:28px;height:2px;background:var(--gold);vertical-align:middle;margin:0 14px}
-.bigbtns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%;max-width:900px}
-.bigbtn{display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;text-decoration:none;border-radius:22px;padding:24px 24px 22px;min-height:150px;background:#fff;color:var(--navy);border:1.5px solid var(--line);transition:transform .15s,box-shadow .15s}
-.bigbtn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(27,59,102,.14)}
-.bigbtn svg{width:34px;height:34px;color:var(--slate)}
+/* página de entrada: padrão do cartão de visita (frente azul, verso branco com ponteiro âmbar) */
+.welcome{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.welcome .wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-block:48px 36px;width:100%}
+.wmark{display:flex;align-items:center;gap:clamp(18px,3vw,34px)}
+.wmark img{width:clamp(130px,17vw,200px);height:auto;flex:none;border-radius:50%}
+.wmark .name{display:flex;flex-direction:column}
+.wmark b{font-family:var(--font-display);font-weight:700;color:var(--steel);font-size:clamp(64px,10vw,124px);line-height:.9;letter-spacing:-.01em}
+.wmark .tag{font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:clamp(11px,1.3vw,15px);color:#fff;margin-top:12px;padding-left:4px}
+.welcome .slogan{font-size:clamp(17px,2.2vw,22px);font-weight:600;color:#fff;margin:34px 0 38px;text-align:center}
+.welcome .slogan::before{content:"";display:inline-block;width:26px;height:3px;background:var(--gold);vertical-align:middle;margin-right:14px;transform:rotate(-45deg)}
+.bigbtns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;width:100%;max-width:880px}
+.bigbtn{position:relative;overflow:hidden;display:flex;align-items:center;gap:14px;text-decoration:none;background:#fff;color:var(--navy);border-radius:6px;padding:26px 24px 30px;box-shadow:0 10px 26px rgba(0,0,0,.18);transition:transform .15s,box-shadow .15s}
+.bigbtn::before{content:"";position:absolute;top:10px;right:-6px;width:44px;height:3px;background:var(--gold);transform:rotate(45deg)}
+.bigbtn::after{content:"";position:absolute;left:0;right:0;bottom:0;height:7px;background:var(--navy)}
+.bigbtn:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,.26)}
+.bigbtn svg{width:30px;height:30px;flex:none;color:var(--slate)}
 .bigbtn b{font-size:22px;font-weight:700}
-.bigbtn .t{display:flex;flex-direction:column;gap:4px;margin-top:14px}
-.bigbtn .t span{font-size:14px;color:var(--muted)}
-.bigbtn.main{background:var(--navy);color:#fff;border-color:var(--navy)}
-.bigbtn.main svg{color:#cfe6d8}
-.bigbtn.main .t span{color:#c9d5e2}
-.bigbtn.sand{background:#f6f1e8;border-color:#efe8dc}
-.bigbtn.sand svg{color:var(--amber-ink)}
-.bigbtn.green{background:#e8f3ec;border-color:#cfe6d8}
-.bigbtn.green svg{color:var(--green)}
-.welcome .scale{width:100%}
+.welcome .scale.light{width:100%;height:26px;opacity:.9;background:
+  repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0 1.5px,transparent 1.5px 12px) bottom/100% 14px no-repeat,
+  repeating-linear-gradient(90deg,#fff 0 2px,transparent 2px 60px) bottom/100% 22px no-repeat}
 @media (max-width:760px){
+  .wmark{flex-direction:column;text-align:center}
+  .wmark .name{align-items:center}
+  .wmark .tag{padding-left:0}
   .bigbtns{grid-template-columns:1fr;max-width:420px}
-  .bigbtn{min-height:0;flex-direction:row;align-items:center;gap:16px;padding:18px 20px}
-  .bigbtn svg{margin:0;flex:none}
-  .bigbtn b{margin:0;font-size:20px;display:block}
-  .bigbtn .t{margin:0}
-  .welcome .slogan{margin:18px 0 26px}
-  .welcome .slogan::before,.welcome .slogan::after{width:16px;margin:0 8px}
+  .bigbtn{padding:20px 22px 24px}
+  .bigbtn b{font-size:20px}
+}
 }
 .about{border-top:0}
 .contact-sec{min-height:70vh}
@@ -283,17 +280,18 @@ footer .sel{user-select:all;color:var(--navy);font-weight:700}
 
 <section class="welcome page" id="inicio" aria-labelledby="w-title">
   <div class="wrap">
-    <img class="logo" src="img/logo-anim-lg.webp" width="220" height="220" alt="Símbolo da G&amp;G">
-    <h1 id="w-title">G&amp;G</h1>
-    <div class="tag">Soluções de Medição</div>
+    <div class="wmark">
+      <img src="img/logo-anim-navy.webp" width="240" height="240" alt="Símbolo da G&amp;G">
+      <div class="name"><b id="w-title">G&amp;G</b><span class="tag">Soluções de Medição</span></div>
+    </div>
     <p class="slogan">Precisão que gera confiança.</p>
     <nav class="bigbtns" aria-label="Escolha uma página">
-      <a class="bigbtn main" href="#produtos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 13l4-4M7 13h1.5M15.5 13H17M12 8v1.5"/><path d="M10 3h4M12 3v2"/></svg><span class="t"><b>Produtos</b><span>Manômetros, reguladores, solda e chopp</span></span></a>
-      <a class="bigbtn sand" href="#quem-somos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8.5" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M3 19a5.5 5.5 0 0 1 11 0M13.5 19a4.5 4.5 0 0 1 7.5-3.3"/></svg><span class="t"><b>Quem somos</b><span>A família por trás da G&amp;G</span></span></a>
-      <a class="bigbtn green" href="#contato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8 9.5h8M8 12.5h5"/></svg><span class="t"><b>Fale conosco</b><span>Celular, WhatsApp, e-mail e formulário</span></span></a>
+      <a class="bigbtn" href="#produtos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 13l4-4M7 13h1.5M15.5 13H17M12 8v1.5"/><path d="M10 3h4M12 3v2"/></svg><b>Produtos</b></a>
+      <a class="bigbtn" href="#quem-somos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8.5" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M3 19a5.5 5.5 0 0 1 11 0M13.5 19a4.5 4.5 0 0 1 7.5-3.3"/></svg><b>Quem somos</b></a>
+      <a class="bigbtn" href="#contato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8 9.5h8M8 12.5h5"/></svg><b>Fale conosco</b></a>
     </nav>
   </div>
-  <div class="scale" aria-hidden="true"></div>
+  <div class="scale light" aria-hidden="true"></div>
 </section>
 
 <div class="page" id="loja" hidden>
